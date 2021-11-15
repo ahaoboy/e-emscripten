@@ -3,7 +3,7 @@ type StringToType<R extends any> = R extends Emscripten.JSType
   ? {
       number: number;
       string: string;
-      array: number | Array<number | string | boolean> | Uint8Array | Int8Array;
+      array: Array<number> | Array<string> | Array<boolean> | Uint8Array | Int8Array;
       boolean: boolean;
       null: null;
     }[R]

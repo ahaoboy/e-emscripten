@@ -6,6 +6,7 @@ type StringToType<R extends any> = R extends Emscripten.JSType
       array: number[] | string[] | boolean[] | Uint8Array | Int8Array;
       boolean: boolean;
       null: null;
+      pointer: number | null; // undefined ?
     }[R]
   : never;
 

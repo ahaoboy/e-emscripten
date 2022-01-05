@@ -25,5 +25,12 @@ describe("blah", () => {
     int_sqrt(0);
     const int_sqrt_number = cwrap("int_sqrt", "number", ["number"]);
     int_sqrt_number(0)
-  });
+
+    const f2 = wasmModul.cwrap("test", "boolean", [
+      "pointer",
+    ]);
+    
+    const r2 = f2(0)
+    const r3 = f2(null)
+  })
 });
